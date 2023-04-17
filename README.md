@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## FrontEnd Placeholder
 
-## Getting Started
+### About
 
-First, run the development server:
+This project was initially started to test out the app-dir feature of Nextjs 13. So, the ui takes inspiration from [here](app-dir.vercel.app).
+Now the project is used as a testing ground for lerning new library or just as a placeholder to some code to be used later.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Issues
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+See the [open issues](https://github.com/Rounak-stha/Github-Search-Simplified/issues) for a full list of proposed features (and known issues).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<!-- CONTRIBUTING -->
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Contributions are **greatly appreciated**.
 
-## Learn More
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with an **appropriate tag**.
 
-To learn more about Next.js, take a look at the following resources:
+1. Open an issue
+2. Fork the Project
+3. Create your Feature Branch
+4. Commit your Changes
+5. Push to the Branch
+6. Open a Pull Request
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Don't forget to give the project a star!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<!-- CONTACT -->
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Rounak Stha - [@IamRstha](https://twitter.com/IamRstha) - [Website](https://rounakstha.me) - rsthaofficial@gmail.com
