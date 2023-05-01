@@ -9,53 +9,10 @@ const SERVER_URL = process.env.SERVER_URL
 // When the route is directly opened, the page is initially already filled with prefetched data
 // On client side navigation the loading component is displayed until the async component loads
 
-const allShopData = [
-	{
-		id: 'abcde',
-		name: 'MacBook',
-		image: 'https://images.unsplash.com/photo-1588053631229-d04fd47cf0ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFjc2V0dXB8ZW58MHx8MHx8&w=1000&q=80',
-		price: '$1200',
-		count: 5
-	},
-	{
-		id: 'abcdf',
-		name: 'MacBook',
-		image: 'https://images.unsplash.com/photo-1588053631229-d04fd47cf0ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFjc2V0dXB8ZW58MHx8MHx8&w=1000&q=80',
-		price: '$1200',
-		count: 5
-	},
-	{
-		id: 'abcdg',
-		name: 'MacBook',
-		image: 'https://images.unsplash.com/photo-1588053631229-d04fd47cf0ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFjc2V0dXB8ZW58MHx8MHx8&w=1000&q=80',
-		price: '$1200',
-		count: 5
-	},
-	{
-		id: 'abcdh',
-		name: 'MacBook',
-		image: 'https://images.unsplash.com/photo-1588053631229-d04fd47cf0ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFjc2V0dXB8ZW58MHx8MHx8&w=1000&q=80',
-		price: '$1200',
-		count: 5
-	},
-	{
-		id: 'abcdi',
-		name: 'MacBook',
-		image: 'https://images.unsplash.com/photo-1588053631229-d04fd47cf0ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFjc2V0dXB8ZW58MHx8MHx8&w=1000&q=80',
-		price: '$1200',
-		count: 5
-	},
-	{
-		id: 'abcdj',
-		name: 'MacBook',
-		image: 'https://images.unsplash.com/photo-1588053631229-d04fd47cf0ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFjc2V0dXB8ZW58MHx8MHx8&w=1000&q=80',
-		price: '$1200',
-		count: 5
-	}
-]
-
 async function Page() {
-	const shopData: ShopItems = allShopData
+	const res = await fetch(`${SERVER_URL}/api/shop`)
+	if (res.status !== 200) throw 'Error'
+	const shopData: ShopItems = await res.json()
 	store.dispatch(setInitialShopItems(shopData))
 
 	return (
