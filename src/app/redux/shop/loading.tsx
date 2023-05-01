@@ -1,4 +1,4 @@
-import LoadingItemContainer from './LoadingItemContainer'
+import LoadingItemContainer from './components/LoadingItemContainer'
 
 export default function Loading() {
 	return (

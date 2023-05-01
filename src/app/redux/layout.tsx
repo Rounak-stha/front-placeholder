@@ -8,7 +8,7 @@ export default function ReduxLayout({ children }: { children: React.ReactNode })
 				<Nav
 					items={[
 						{ name: 'Todo', link: '/redux/todo' },
-						{ name: 'Cart', link: '/redux/cart' }
+						{ name: 'Shop', link: '/redux/shop' }
 					]}
 				/>
 			</div>
