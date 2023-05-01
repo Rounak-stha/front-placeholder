@@ -3,12 +3,14 @@ import ItemContainer from './components/ShopItem'
 import { store } from '@/store'
 import ShopItemsPreloader from './components/ShopItemPreloader'
 
+const SERVER_URL = process.env.SERVER_URL
+
 // Async components are automatically wrapped around a Suspence Boundary with the loading.tsx page as the loading page
 // When the route is directly opened, the page is initially already filled with prefetched data
 // On client side navigation the loading component is displayed until the async component loads
 
 const Page = async () => {
-	const res = await fetch('http://localhost:3000/api/shop')
+	const res = await fetch(`${SERVER_URL}/api/shop`)
 	if (res.status !== 200) throw 'Error'
 	const shopData: ShopItems = await res.json()
 	store.dispatch(setInitialShopItems(shopData))
