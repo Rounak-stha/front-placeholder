@@ -9,7 +9,7 @@ const SERVER_URL = process.env.SERVER_URL
 // When the route is directly opened, the page is initially already filled with prefetched data
 // On client side navigation the loading component is displayed until the async component loads
 
-const Page = async () => {
+async function Page() {
 	const res = await fetch(`${SERVER_URL}/api/shop`)
 	if (res.status !== 200) throw 'Error'
 	const shopData: ShopItems = await res.json()
