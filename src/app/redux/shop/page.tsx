@@ -10,7 +10,7 @@ const SERVER_URL = process.env.SERVER_URL
 // On client side navigation the loading component is displayed until the async component loads
 
 async function Page() {
-	const res = await fetch(`${SERVER_URL}/api/shop`)
+	const res = await fetch(`${SERVER_URL}/api/shop`, { cache: 'no-store' })
 	if (res.status !== 200) throw 'Error'
 	const shopData: ShopItems = await res.json()
 	store.dispatch(setInitialShopItems(shopData))
