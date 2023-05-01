@@ -1,4 +1,3 @@
-import { ShoppingCart } from 'lucide-react'
 import Cart from './components/Cart'
 
 export default function CartLayout({ children }: { children: React.ReactNode }) {
