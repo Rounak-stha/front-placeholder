@@ -3,6 +3,7 @@ import Nav from '@/ui/Nav'
 import './globals.css'
 import RootProvider from '@/components/RootProvider'
 import { Rubik } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 
 const rubik = Rubik({ subsets: ['latin'], weight: ['300', '400', '500', '700', '900'] })
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang='en'>
 			<body className={`p-4 ${rubik.className}`}>
+				<Analytics />
 				<div className='xl:w-2/3 lg:w-3/4 mx-auto'>
 					<RootProvider>
 						<Container>
