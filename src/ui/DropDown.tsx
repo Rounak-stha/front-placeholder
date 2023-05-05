@@ -17,7 +17,7 @@ export default function DropDown({ items, icon }: Props) {
 		<Dropdown.Root>
 			<Dropdown.Trigger>{icon}</Dropdown.Trigger>
 			<Dropdown.Portal>
-				<Dropdown.Content align='end' className='rounded-sm bg-gray-950 p-1 border-2 border-gray-800 w-36'>
+				<Dropdown.Content align='end' className='rounded-sm bg-gray-950 p-1 border-2 border-bdr-light w-36'>
 					{items.map((item, i) => {
 						if ('subItems' in item) {
 							return (
@@ -30,7 +30,7 @@ export default function DropDown({ items, icon }: Props) {
 									</Dropdown.SubTrigger>
 									<Dropdown.Portal>
 										<Dropdown.SubContent
-											className='rounded-md bg-gray-950 p-1 border-2 border-gray-800 w-36'
+											className='rounded-md bg-gray-950 p-1 border-2 border-bdr-light w-36'
 											sideOffset={4}
 											alignOffset={0}
 										>

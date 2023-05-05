@@ -9,7 +9,7 @@ export default function CartLayout({ children }: { children: React.ReactNode }) 
 				</div>
 				<Cart />
 			</div>
-			<hr className='my-3 border-gray-800' />
+			<hr className='mt-3 mb-4 border-bdr-light' />
 			{children}
 		</>
 	)

@@ -5,7 +5,7 @@ export default function TodoDeleteAlert({ onClick }: { onClick: (e: React.MouseE
 	return (
 		<AlertDialog.Root>
 			<AlertDialog.Trigger asChild>
-				<button className='h-7 w-7 flex justify-center items-center rounded-md border-2 border-gray-800 hover:border-red-700 text-gray-800 hover:text-red-700'>
+				<button className='h-7 w-7 flex justify-center items-center rounded-md border-2 border-bdr-light hover:border-red-700 text-gray-800 hover:text-red-700'>
 					<Trash2 size={15} fill='inherit' />
 				</button>
 			</AlertDialog.Trigger>

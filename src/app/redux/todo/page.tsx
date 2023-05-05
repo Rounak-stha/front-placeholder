@@ -9,7 +9,7 @@ const Page = () => {
 		<div>
 			<div className='mb-3 flex'>
 				<h2 className='text-lg flex-1'>Create your Todos</h2>
-				<div className='h-7 w-7 flex justify-center items-center rounded-md border-2 border-gray-800'>
+				<div className='h-7 w-7 flex justify-center items-center rounded-md border-2 border-bdr-light'>
 					<TodosFilter />
 				</div>
 			</div>
