@@ -1,4 +1,5 @@
 'use client'
+import Button from '@/components/Button'
 import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
 
@@ -13,13 +14,10 @@ const Nav = ({ items }: Props) => {
 		<div className='flex gap-4'>
 			{items.map((i) => (
 				<Link key={i.name} href={i.link}>
-					<p
-						className={`inline-block text-sm px-4 py-[6px] rounded-lg ${
-							segment?.toLowerCase() === i.name.toLowerCase() ? 'bg-blue-500' : 'border border-gray-800'
-						}`}
-					>
-						{i.name}
-					</p>
+					<Button
+						text={i.name}
+						intent={segment?.toLowerCase() === i.name.toLowerCase() ? 'primary' : 'outlined'}
+					/>
 				</Link>
 			))}
 		</div>
