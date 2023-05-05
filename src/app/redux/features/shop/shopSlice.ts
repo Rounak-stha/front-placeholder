@@ -6,6 +6,7 @@ export type ShopItem = {
 	name: string
 	image: string
 	price: string
+	currency: string
 	count: number
 }
 

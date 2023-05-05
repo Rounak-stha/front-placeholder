@@ -1,8 +1,8 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 
-import type { ShopItem } from '../shop/shopSlice'
+import type { ShopItem as CartItem } from '../shop/shopSlice'
 
-export type CartItems = ShopItem[]
+export type CartItems = CartItem[]
 
 export type CartState = {
 	items: CartItems
@@ -16,7 +16,7 @@ const cartSlice = createSlice({
 	name: 'cart',
 	initialState,
 	reducers: {
-		addCartItem(state, action: PayloadAction<ShopItem>) {
+		addCartItem(state, action: PayloadAction<CartItem>) {
 			const existingItem = state.items.find((item) => item.id === action.payload.id)
 			if (existingItem) {
 			} else state.items.push(action.payload)
