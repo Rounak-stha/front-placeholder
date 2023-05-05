@@ -8,9 +8,13 @@ export default function CartPage() {
 
 	return (
 		<div className='flex flex-col gap-3'>
-			{cartItemsId.map((id) => (
-				<CartItem key={id} id={id} />
-			))}
+			{cartItemsId.length ? (
+				cartItemsId.map((id) => <CartItem key={id} id={id} />)
+			) : (
+				<div className='h-52 flex justify-center items-center'>
+					<h1 className='text-xl font-bold'>Empty Cart</h1>
+				</div>
+			)}
 		</div>
 	)
 }
